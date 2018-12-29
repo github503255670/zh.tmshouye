@@ -1,0 +1,1950 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ 
+<!-- 可选的Bootstrap主题文件（一般不使用）
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"></script> -->
+ 
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+ 
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- mystyle-->
+<link href="mystyle/mystyle.css" rel="stylesheet">
+<!-- myicon -->
+<link href="icon/iconfont.css" rel="stylesheet">
+<title>天猫tmall.com--理想生活上天猫</title>
+
+
+</head>
+<body>
+<!-- 右侧边栏 -->
+<div class="youcelan">
+	<div class="youcelan-1">
+		<div class="youcelanbtn-rq ">  <i class="iconfont icon-tianmao01"></i><div class="youcelan-rq myyouhua"><div class="youcelan-rq-text">会员权益</div><i class="glyphicon glyphicon-triangle-right"></i></div></div>
+		<div id="youcelanbtn-rq-2" class="youcelanbtn-rq " style="height:100px;"> <div class="youcelan-gwc"><i class="iconfont icon-gouwuche " style="top:-50px;color:#ff0036;font-size:20px"></i> <div class="youcelan-text">购 物 车</div></div></div>
+		<div class="youcelanbtn-rq ">  <i class="iconfont icon-renminbi"></i><div class="youcelan-rq myyouhua"><div class="youcelan-rq-text">我的资产</div><i class="glyphicon glyphicon-triangle-right"></i></div></div>
+		<div class="youcelanbtn-rq ">  <i class="iconfont icon-wujiaoxing1"></i><div class="youcelan-rq myyouhua"><div class="youcelan-rq-text">我的收藏</div><i class="glyphicon glyphicon-triangle-right"></i></div></div>
+		<div class="youcelanbtn-rq ">  <i class="iconfont icon-lishi"></i><div class="youcelan-rq myyouhua"><div class="youcelan-rq-text">我看过的</div><i class="glyphicon glyphicon-triangle-right"></i></div></div>
+		<div class="youcelanbtn-rq ">  <i class="iconfont icon-chongzhi"></i><div class="youcelan-rq myyouhua"><div class="youcelan-rq-text">我要充值</div><i class="glyphicon glyphicon-triangle-right"></i></div></div>
+	</div>                                                  
+	<div class="youcelan-2">                                
+		<div class="youcelanbtn-rq ">   <i class="iconfont icon-jilu"></i><div class="youcelan-rq myyouhua"><div class="youcelan-rq-text">用户反馈</div><i class="glyphicon glyphicon-triangle-right"></i></div></div>
+		<div class="youcelanbtn-rq ">   <i class="iconfont icon-erweima"></i><div class="youcelan-rq myyouhua"><div class="youcelan-rq-text">二维码</div><i class="glyphicon glyphicon-triangle-right"></i></div></div>
+		<div class="youcelanbtn-rq ">   <i class="iconfont icon-top"></i><div class="youcelan-rq myyouhua"><div class="youcelan-rq-text">返回顶部</div><i class="glyphicon glyphicon-triangle-right"></i></div></div>
+	</div>
+</div>
+<!-- 左侧边栏 -->
+
+<div class="zuocelan">
+	<ul >
+		<li class="zuocelan-1-1 zuocelan-1-1-daohang">导航</li>
+		<li class="zuocelan-1-1 zuocelan-1-1-1">天猫超市</li>
+		<li class="zuocelan-1-1 zuocelan-1-1-2">天猫国际</li>
+		<li class="zuocelan-1-1 zuocelan-1-1-3">美丽人生</li>
+		<li class="zuocelan-1-1 zuocelan-1-1-4">潮电酷玩</li>
+		<li class="zuocelan-1-1 zuocelan-1-1-5">居家生活</li>
+		<li class="zuocelan-1-1 zuocelan-1-1-6">打造爱巢</li>
+		<li class="zuocelan-1-1 zuocelan-1-1-7">户外出行</li>
+		<li class="zuocelan-1-1 zuocelan-1-1-8">猜你喜欢</li>
+		<li class="zuocelan-1-1 zuocelan-1-1-dingbu"><i class="iconfont icon-top"></i></li>
+	</ul>
+</div>
+
+<script> 
+//标签颜色
+var btncolor=new Array("#64c333","#ff0036","#ea5f8d","#0aa6e8","#64c333","#f15453","#19c8a9","#ff0036");
+$(document).ready(function(){
+//滚动判断变色
+	$(window).scroll(function(){
+	for(i=1;i<9;i++){$(".zuocelan-1-1").eq(i).css("backgroundColor","#626262");}
+		if ($(window).scrollTop()<($(".lunbo").offset().top+$(".lunbo").height())){
+			$(".zuocelan").hide(200);
+		}
+		else{
+			$(".zuocelan").show(200);
+			if ($(window).scrollTop()>=$(".fenqu-rq").eq(0).offset().top&&$(window).scrollTop()<$(".fenqu-rq").eq(1).offset().top){
+			$(".zuocelan-1-1").eq(1).css("backgroundColor",btncolor[0]);
+			}
+			else {
+				if ($(window).scrollTop()>=$(".fenqu-rq").eq(1).offset().top&&$(window).scrollTop()<$(".fenqu-rq").eq(2).offset().top){
+				$(".zuocelan-1-1").eq(2).css("backgroundColor",btncolor[1]);
+				}
+				else{
+					if ($(window).scrollTop()>=$(".fenqu-rq").eq(2).offset().top&&$(window).scrollTop()<$(".fenqu-rq").eq(3).offset().top){
+					$(".zuocelan-1-1").eq(3).css("backgroundColor",btncolor[2]);
+					}
+					else{
+						if ($(window).scrollTop()>=$(".fenqu-rq").eq(3).offset().top&&$(window).scrollTop()<$(".fenqu-rq").eq(4).offset().top){
+						$(".zuocelan-1-1").eq(4).css("backgroundColor",btncolor[3]);
+						}
+						else{
+							if ($(window).scrollTop()>=$(".fenqu-rq").eq(4).offset().top&&$(window).scrollTop()<$(".fenqu-rq").eq(5).offset().top){
+							$(".zuocelan-1-1").eq(5).css("backgroundColor",btncolor[4]);
+							}
+							else{
+								if ($(window).scrollTop()>=$(".fenqu-rq").eq(5).offset().top&&$(window).scrollTop()<$(".fenqu-rq").eq(6).offset().top){
+								$(".zuocelan-1-1").eq(6).css("backgroundColor",btncolor[5]);
+								}
+								else{
+									if ($(window).scrollTop()>=$(".fenqu-rq").eq(6).offset().top&&$(window).scrollTop()<$(".fenqu-rq").eq(7).offset().top){
+									$(".zuocelan-1-1").eq(7).css("backgroundColor",btncolor[6]);
+									}
+									else{
+										if ($(window).scrollTop()>=$(".fenqu-rq").eq(7).offset().top){
+										$(".zuocelan-1-1").eq(8).css("backgroundColor",btncolor[7]);
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	});
+//点击跳转
+$(".zuocelan-1-1").eq(1).click(function(){$("html,body").animate({scrollTop:$(".fenqu-rq").eq(0).offset().top},100)});
+$(".zuocelan-1-1").eq(2).click(function(){$("html,body").animate({scrollTop:$(".fenqu-rq").eq(1).offset().top},100)});
+$(".zuocelan-1-1").eq(3).click(function(){$("html,body").animate({scrollTop:$(".fenqu-rq").eq(2).offset().top},100)});
+$(".zuocelan-1-1").eq(4).click(function(){$("html,body").animate({scrollTop:$(".fenqu-rq").eq(3).offset().top},100)});
+$(".zuocelan-1-1").eq(5).click(function(){$("html,body").animate({scrollTop:$(".fenqu-rq").eq(4).offset().top},100)});
+$(".zuocelan-1-1").eq(6).click(function(){$("html,body").animate({scrollTop:$(".fenqu-rq").eq(5).offset().top},100)});
+$(".zuocelan-1-1").eq(7).click(function(){$("html,body").animate({scrollTop:$(".fenqu-rq").eq(6).offset().top},100)});
+$(".zuocelan-1-1").eq(8).click(function(){$("html,body").animate({scrollTop:$(".fenqu-rq").eq(7).offset().top},100)});
+$(".zuocelan-1-1").eq(9).click(function(){$("html,body").scrollTop(0)});
+$(".youcelanbtn-rq").eq(8).click(function(){$("html,body").scrollTop(0)});
+});
+
+</script>
+<!-- 顶部导航-->
+<div class="site-nav">
+	<nav class="site-nav-container1">
+		<span>喵，欢迎来天猫</span>
+		<a>请登录</a>
+		<a>免费注册</a>
+		<div class="site-nav-container1-1">
+		<div class="dropdown">
+			<a class="dropbtn">我的淘宝<b class="caret"></b></a>	
+			<div class="dropdown-content" style="width:94px">
+			<a>已买到的宝贝</a>
+			<a>已卖出的宝贝</a>
+			</div>
+		</div>
+		<a><span class="glyphicon glyphicon-shopping-cart tmred"></span> 购物车<span>0</span>件</a>
+		<div class="dropdown">
+			<a class="dropbtn">收藏夹<b class="caret"></b></a>	
+			<div class="dropdown-content" style="width:80px">
+			<a>收藏的宝贝</a>
+			<a>收藏的店铺</a>
+			</div>
+		</div>|	
+		<div class="dropdown">
+			<a class="dropbtn"><span class="glyphicon glyphicon-phone tmred"></span> 手机版</a>	
+			<div class="dropdown-content">
+			<img src="//img.alicdn.com/tfs/TB1MDxDRpXXXXXUXFXXXXXXXXXX-175-215.png">
+	
+			</div>
+		</div>		
+		<a>淘宝网</a>
+		<div class="dropdown">
+			<a class="dropbtn">商家支持<b class="caret"></b></a>	
+			<div class="dropdown-content" style="right:0;width:150px;">
+				<table>
+					<span>商家：</span>
+					<tr>
+						<td><a>商家中心</a></td>
+						<td><a>天猫规则</a></td>
+					</tr>
+					<tr>
+						<td><a>商家入驻</a></td>
+						<td><a>运营服务</a></td>
+					</tr>
+					<tr>
+						<td><a>商家品控</a></td>
+						<td><a>商家工具</a></td>
+					</tr>
+					<tr>
+						<td><a>天猫智库</a></td>
+						<td><a>喵言喵语</a></td>
+					</tr>				
+				</table>
+				<hr>
+				<table>
+					<span>帮助：</span>
+					<tr>
+						<td><a>帮助中心</a></td>
+						<td><a>问商友</a></td>
+					</tr>
+				</table>
+				<hr>
+			</div>
+		</div>
+		<div class="dropdown">
+			<a class="dropbtn"><span class="glyphicon glyphicon-list tmred"></span> 网站导航<b class="caret"></b></a>
+			<div class="dropdown-content" style="right:0;width:1200px;height:160px;">
+				<div class="site-cont-hot">
+				<h2>"热点推荐" Hot</h2>
+				<ul class="site-list">
+					<li><a>天猫超市</a></li>
+					<li><a>喵鲜生</a></li>
+					<li><a>科技新品</a></li>
+					<li><a>女装新品</a></li>
+					<li><a>酷玩街</a></li>
+					<li><a>内衣新品</a></li>
+					<li><a>试美妆</a></li>
+					<li><a>运动新品</a></li>
+					<li><a>时尚先生</a></li>
+					<li><a>精明妈咪</a></li>
+					<li><a>吃乐汇</a></li>
+					<li><a>企业采购</a></li>
+					<li><a>会员积分</a></li>
+					<li><a>天猫国际</a></li>
+					<li><a>品质频道</a></li>
+				</ul>			
+				</div>
+				<div class="site-cont-market">
+				<h2>"行业市场" Market</h2>
+				<ul class="site-list">
+					<li><a>美妆</a></li>
+					<li><a>电器</a></li>
+					<li><a>女装</a></li>
+					<li><a>男装</a></li>
+					<li><a>女鞋</a></li>
+					<li><a>男鞋</a></li>
+					<li><a>内衣</a></li>
+					<li><a>箱包</a></li>
+					<li><a>运动</a></li>
+					<li><a>母婴</a></li>
+					<li><a>家装</a></li>
+					<li><a>医药</a></li>
+					<li><a>食品</a></li>
+					<li><a>配饰</a></li>
+					<li><a>汽车</a></li>
+				</ul>			
+				
+				</div>
+				<div class="site-cont-help">
+				<h2>"服务指南" Help</h2>
+				<ul class="site-list">
+					<li><a>帮助中心</a></li>
+					<li><a>品质保障</a></li>
+					<li><a>特色服务</a></li>
+					<li><a>七天退换货</a></li>
+				
+				</ul>			
+				</div>
+			</div>
+		</div>
+		</div>
+	</nav>
+</div>
+
+<!--头部logo和搜索框-->
+<div class="site-header">
+<div class="site-header-fix">
+	<div class="header-logo"><a href=""><img src="https://img.alicdn.com/tps/i4/TB1CCJ1rwHqK1RjSZJntKbNLpXa.gif"></a></div>
+	<div class="header-part1">
+		<form class="header-search-form">
+			<input  id="header-search-input"type="text"  class="header-search-input" placeholder=" 搜索 天猫 商品/品牌/店铺" ></input><button class="header-search-btn">搜索</button>
+		</form>	
+
+		<ul>
+			<li style="border:none;"><a href="">针织衫</a></li>
+			<li><a href="" class="tmred">连衣裙</a></li>
+			<li><a href="">四件套</a></li>
+			<li><a href="" class="tmred">摄像头</a></li>
+			<li><a href="">客厅灯</a></li>
+			<li><a href="">口红</a></li>
+			<li><a href="" class="tmred">手机</a></li>
+			<li><a href="">运动鞋</a></li>
+			<li><a href="" class="tmred">牛奶</a></li>
+		</ul>
+	</div>
+</div>
+</div>
+
+<!--轮播上小导航-->
+<div class="main-nav">
+<div class="main-nav-fix">
+	<div class="main-nav-1">
+	
+		
+		<div><i class="iconfont icon-caidan" style="font-size:20px"></i>   商品分类</div>	
+
+	</div>
+	<a href="" style="width:100px;height:30px;"><img src="//img.alicdn.com/tfs/TB1ztBlaMMPMeJjy1XbXXcwxVXa-200-60.png"></a>
+	<a href="" style="width:100px;height:30px;"><img src="//img.alicdn.com/tfs/TB1t5ObaBxRMKJjy0FdXXaifFXa-200-60.png"></a>
+	<a href="">天猫会员</a>
+	<a href="">电器城</a>
+	<a href="">喵鲜生</a>
+	<a href="">医药馆</a>
+	<a href="">营业厅</a>
+	<a href="">魅力惠</a>
+	<a href="">飞猪旅行</a>
+	<a href="">苏宁易购</a>
+</div>
+</div>
+
+<!-- 轮播块-->
+<div class="lunbo"  >
+
+<!-- 横向菜单 -->
+
+	<div class="fenlei-fix">
+	<div class="fenlei">
+		<ul>			
+			<li class="fenleirongqi"> <a class="fenleibtn fenlei-color1"><i class="iconfont icon-nvzhuangnvxie fenlei-color1"></i>    女装 /内衣</a>
+			<div class="fenlei-mulu fenlei-mulu-1" >
+				<div class="fenlei-text-rq">
+					<div class="fenlei-title-rq">当季流行  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color1">女装新品</a>
+						<a>商场同款</a>
+						<a class="fenlei-color1">仙女连衣裙</a>
+						<a>T恤</a>
+						<a>衬衫</a>
+						<a>时髦外套</a>
+						<a>休闲裤</a>
+						<a>牛仔裤</a>
+						<a class="fenlei-color1">无痕文胸</a>
+						<a>运动文胸</a>
+						<a class="fenlei-color1">潮流居家服</a>
+						<a>百搭船袜</a>
+					</div>
+					<div class="fenlei-title-rq">精选上装  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color1">仙女连衣裙</a>
+						<a class="fenlei-color1">T恤</a>
+						<a class="fenlei-color1">衬衫</a>
+						<a>雪纺衫</a>
+						<a>卫衣</a>
+						<a>短外套</a>
+						<a>丝绒卫衣</a>
+						<a>毛针织衫</a>
+						<a>小西装</a>
+						<a>风衣</a>
+					</div>
+					<div class="fenlei-title-rq">浪漫裙装  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color1">连衣裙</a>
+						<a>半身裙</a>
+						<a class="fenlei-color1">A字裙</a>
+						<a class="fenlei-color1">荷叶边裙</a>
+						<a>大摆裙</a>
+						<a>包臀裙</a>
+						<a class="fenlei-color1">百褶裙</a>
+						<a>长袖连衣裙</a>
+						<a>棉麻连衣裙</a>
+						<a>牛仔裙</a>
+						<a>蕾丝连衣裙</a>
+						<a>真丝连衣裙</a>
+						<a>印花连衣裙</a>
+					</div>
+					<div class="fenlei-title-rq">女士下装  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color1">休闲裤</a>
+						<a class="fenlei-color1">阔腿裤</a>
+						<a>牛仔裤</a>
+						<a>打底裤</a>
+						<a class="fenlei-color1">开叉运动裤</a>
+						<a>哈伦裤</a>
+						<a>背带裤</a>
+						<a>小脚裤</a>
+						<a>西装裤</a>
+						<a>短裤</a>
+					</div>
+					<div class="fenlei-title-rq">特色女装  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color1">时尚套装</a>
+						<a>休闲套装</a>
+						<a class="fenlei-color1">日系女装</a>
+						<a class="fenlei-color1">精选妈妈装</a>
+						<a>大码女装</a>
+						<a>职业套装</a>
+						<a>优雅旗袍</a>
+						<a>精致礼服</a>
+						<a>婚纱</a>
+						<a>唐装</a>
+						<a>小码女装</a>
+						
+					</div>
+					<div class="fenlei-title-rq">文胸塑身  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a>光面文胸</a>
+						<a>运动文胸</a>
+						<a>美背文胸</a>
+						<a>聚拢文胸</a>
+						<a>大杯文胸</a>
+						<a>轻薄塑身</a>
+						
+					</div>
+					<div class="fenlei-title-rq">居家服  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a>春夏居家服</a>
+						<a>纯棉居家服</a>
+						<a>莫代尔居家服</a>
+						<a>真丝居家服</a>
+						<a>春夏睡裙</a>
+						<a>男士居家服</a>
+						<a>情侣居家服</a>
+						<a>性感睡裙</a>
+					
+					</div>
+					<div class="fenlei-title-rq">内裤背心  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a>男士内裤</a>
+						<a>女士内裤</a>
+						<a>男士内裤多条装</a>
+						<a>女士内裤多条装</a>
+						<a>莫代尔内裤</a>
+					
+					</div>					
+				</div><div class="tiepian-rq">
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1B_DcJpXXXXXWXFXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/i4/T1gRqVXk4fXXb1upjX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1wNJAHFXXXXc7XpXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1w472LFXXXXXwXVXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1fETUHpXXXXbmapXXwu0bFXXX.png_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1UJIfJXXXXXctaXXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1FfxjHFXXXXbWaXXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB18XAnIVXXXXclXXXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1gWxjFFXXXXcEaFXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/http://img.taobaocdn.com/bao/uploaded/TB1HMfoHpXXXXclXXXXwu0bFXXX.png_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB18nTOLVXXXXc5XXXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB1wzzFLVXXXXbXXFXXXXXXXXXX-400-200.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB1SvLzLVXXXXaKXVXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB17DDrLVXXXXbOaXXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB1dSYULVXXXXXlXXXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB1xPvNLVXXXXXDXpXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a class="tiepian-rq-last"><img src="https://img.alicdn.com/tps/TB1xnkQKVXXXXaJXXXXXXXXXXXX-378-174.jpg"></a>
+				</div>
+			</div></li>
+			<li class="fenleirongqi"> <a class="fenleibtn fenlei-color2"><i class="iconfont icon-nanzhuang fenlei-color2"></i>    男装 /运动户外</a>
+			<div class="fenlei-mulu fenlei-mulu-2" >
+				<div class="fenlei-text-rq">
+					<div class="fenlei-title-rq">当季流行  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color2">双11男装会场</a>
+						<a class="fenlei-color2">当季新品</a>
+						<a>商场同款</a>
+						<a class="fenlei-color2">保暖棉服</a>
+						<a class="fenlei-color2">潮流卫衣</a>
+						<a class="fenlei-color2">修身夹克</a>
+						<a>棉麻面料</a>
+						<a>牛仔衬衫</a>
+						<a class="fenlei-color2">温暖的针织衫</a>
+						<a>修身西服</a>
+						<a class="fenlei-color2">秋冬风衣</a>
+						<a>印花T恤</a>
+						<a class="fenlei-color2">束脚裤</a>
+						<a>九分裤</a>
+						<a>破洞牛仔裤</a>
+						<a class="fenlei-color2">跑步鞋</a>
+						<a class="fenlei-color2">休闲鞋</a>
+						<a class="fenlei-color2">篮球鞋</a>
+						<a class="fenlei-color2">自行车</a>
+						<a>平衡车</a>
+						<a>帆布鞋</a>
+						<a>运动套装</a>
+						<a class="fenlei-color2">运动卫衣</a>
+						<a class="fenlei-color2">鱼竿</a>
+						<a class="fenlei-color2">冲锋衣</a>
+						<a class="fenlei-color2">跑步机</a>
+						<a class="fenlei-color2">电动车</a>
+					</div>
+					<div class="fenlei-title-rq">运动服  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color2">短袖T恤</a>
+						<a class="fenlei-color2">运动裤</a>
+						<a class="fenlei-color2">运动内衣</a>
+						<a class="fenlei-color2">速干T恤</a>
+						<a class="fenlei-color2">运动Polo</a>
+						<a>运动卫衣</a>
+						<a class="fenlei-color2">运动套装</a>
+						<a class="fenlei-color2">运动短裤</a>
+						<a class="fenlei-color2">健身服</a>
+						<a>运动茄克</a>
+					
+					</div>
+					<div class="fenlei-title-rq">户外用品  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color2">钓竿</a>
+						<a>双肩背包</a>
+						<a class="fenlei-color2">防晒衣</a>
+						<a class="fenlei-color2">户外包</a>
+						<a class="fenlei-color2">帐篷</a>
+						<a>手电筒</a>
+						<a>刀具</a>
+					
+					</div>
+					<div class="fenlei-title-rq">运动用品  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color2">跑步机</a>
+						<a class="fenlei-color2">瑜伽垫</a>
+						<a class="fenlei-color2">泳衣</a>
+						<a class="fenlei-color2">瑜伽服</a>
+						<a class="fenlei-color2">羽毛球拍</a>
+						<a class="fenlei-color2">自行车</a>
+						<a>电动车</a>
+						<a>篮球</a>
+						<a>足球</a>
+						<a>运动护具</a>
+						<a>健身器械</a>
+						<a>网球拍</a>
+					
+					</div>
+					<div class="fenlei-title-rq">自行车  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color2">自行车</a>
+						<a>山地车</a>
+						<a class="fenlei-color2">折叠车</a>
+						<a class="fenlei-color2">平衡车</a>
+						<a class="fenlei-color2">公路车</a>
+						<a>骑行服</a>
+						<a>死飞</a>
+						<a>头盔</a>
+						<a>自行车锁</a>
+						<a class="fenlei-color2">自行车灯</a>
+						<a>骑行眼镜</a>
+						<a>电动车</a>
+						
+					</div>
+				</div><div class="tiepian-rq">
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1QgL7LFXXXXboXFXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB18HHTLFXXXXaJaXXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1B6.BLFXXXXXZXXXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1krn7LFXXXXbVXFXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1Im6ULFXXXXapaXXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB16BD9LFXXXXXhXFXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1KtC.LVXXXXauaXXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1eFwrLFXXXXacXXXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i2/TB1MDj0LVXXXXaNXpXXXpJt1pXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i2/TB1rGn5LVXXXXcZXXXXXpJt1pXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i4/TB1gAvVLVXXXXbeXFXXPqXt1pXX-1000-500.png_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i2/TB1ORPWLVXXXXX1XFXXPqXt1pXX-1000-500.png_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i3/TB1vifWLVXXXXc6XpXXXpJt1pXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/imgextra/i1/414285109/TB273rQaazyQeBjy0FbXXbZapXa_!!414285109.png_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i1/TB1NBn3LVXXXXXyXpXXXpJt1pXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i4/TB1F3PILVXXXXcZapXXXpJt1pXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a class="tiepian-rq-last"><img src="https://img.alicdn.com/tps/TB1_4baLXXXXXbcXFXXXXXXXXXX-378-174.jpg"></a>
+				</div>
+			</div></li>
+			<li class="fenleirongqi"> <a class="fenleibtn fenlei-color3"><i class="iconfont icon-xie fenlei-color3"></i>    女鞋 /男鞋/箱包</a>
+			<div class="fenlei-mulu fenlei-mulu-3" >
+				<div class="fenlei-text-rq">
+					<div class="fenlei-title-rq">推荐女鞋  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color3">潮流过膝靴</a>
+						<a class="fenlei-color3">气质百搭裸靴</a>
+						<a>永远的帆布鞋</a>
+						<a class="fenlei-color3">流行松糕底</a>
+						<a>英伦牛津鞋</a>
+					</div>
+					<div class="fenlei-title-rq">潮流男鞋  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color3">商场同款</a>
+						<a class="fenlei-color3">休闲鞋</a>
+						<a>正装皮鞋</a>
+						<a>休闲皮鞋</a>
+						<a class="fenlei-color3">板鞋</a>
+						<a class="fenlei-color3">户外休闲</a>
+						<a>帆布鞋</a>
+						<a class="fenlei-color3">运动休闲</a>
+						<a>乐福鞋</a>
+						<a class="fenlei-color3">豆豆鞋</a>
+						<a class="fenlei-color3">布洛克</a>
+						<a class="fenlei-color3">帆布鞋</a>
+						<a>布鞋</a>
+					</div>
+					<div class="fenlei-title-rq">女 单 鞋  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color3">单鞋</a>
+						<a>小白鞋</a>
+						<a class="fenlei-color3">商场同款</a>
+						<a>帆布鞋</a>
+						<a class="fenlei-color3">深口单鞋</a>
+						<a>浅口单鞋</a>
+						<a class="fenlei-color3">平底单鞋</a>
+						<a class="fenlei-color3">高跟单鞋</a>
+						<a class="fenlei-color3">坡跟单鞋</a>
+						<a>豆豆鞋</a>
+						<a>乐福鞋</a>
+						<a>牛津鞋</a>					
+					</div>
+					<div class="fenlei-title-rq">特 色 鞋  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a>妈妈鞋</a>
+						<a class="fenlei-color3">大码女鞋</a>
+						<a class="fenlei-color3">小码女鞋</a>
+						<a>女内增高</a>
+						<a class="fenlei-color3">男内增高</a>
+						<a>软轻风</a>
+						<a class="fenlei-color3">爸爸鞋</a>
+						<a class="fenlei-color3">大码男鞋</a>
+						<a>小码男鞋</a>
+					</div>
+					<div class="fenlei-title-rq">潮流女包  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color3">新品推荐</a>
+						<a class="fenlei-color3">商场同款</a>
+						<a class="fenlei-color3">女士钱包</a>
+						<a>单肩包</a>
+						<a>斜挎包</a>
+						<a>手提包</a>
+						<a>手拿包</a>
+						<a>腰包</a>
+						<a>胸包</a>
+						<a>化妆包</a>						
+					</div>
+					<div class="fenlei-title-rq">精品男包  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color3">男士钱包</a>
+						<a>收纳包</a>
+						<a>胸包</a>
+						<a class="fenlei-color3">腰包</a>
+						<a>手拿包</a>
+						<a class="fenlei-color3">手提包</a>
+						<a>斜挎包</a>
+						<a>单肩包</a>
+						<a>商场同款</a>
+						<a>新品推荐</a>						
+					</div>
+					<div class="fenlei-title-rq">功能箱包  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color3">旅行箱</a>
+						<a>万向轮箱</a>
+						<a>旅行袋</a>
+						<a class="fenlei-color3">女士双肩包</a>
+						<a>男士双肩包</a>
+						<a>韩版双肩包</a>
+						<a>铆钉双肩包</a>
+						<a>女士钱包</a>
+						<a>男士钱包</a>	
+						<a class="fenlei-color3">大容量</a>	
+						<a class="fenlei-color3">印花</a>	
+					</div>
+				</div><div class="tiepian-rq">
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1Nza1LFXXXXbDXFXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1tBlBMXXXXXXaXFXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i4/TB1hp9WPpXXXXbZXFXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i4/TB1ZCmFPpXXXXbpaXXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i4/TB1HTKLPpXXXXXEaXXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/T1gwebFcFbXXb1upjX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/T1GKWaFd4eXXb1upjX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/T1b98VFgJiXXb1upjX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i4/TB1PCq3PpXXXXcAXpXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i3/TB1LX3bLVXXXXcLXXXXXpJt1pXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i2/TB1BoYYLVXXXXaZXVXXXpJt1pXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i4/TB1XkMXLVXXXXXHXpXXXpJt1pXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i4/TB1jL24LVXXXXXRXFXXXpJt1pXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i1/TB16Jn1LVXXXXc8XFXXXpJt1pXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i3/TB1_QH3LVXXXXaYXFXXXpJt1pXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i1/TB1ryEcLVXXXXaFXXXXXpJt1pXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a></a>
+				</div>
+							
+			</div></li>
+			<li class="fenleirongqi"> <a class="fenleibtn fenlei-color4"><i class="iconfont icon-meizhuang fenlei-color4"></i>    美妆 /个人护理</a>
+			<div class="fenlei-mulu fenlei-mulu-4" >
+				<div class="fenlei-text-rq">
+					<div class="fenlei-title-rq">护 肤 品  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color4">官方直售</a>
+						<a class="fenlei-color4">面膜</a>
+						<a class="fenlei-color4">护肤套装</a>
+						<a>乳液面霜</a>
+						<a>精华液</a>
+						<a>护手液</a>
+						<a>爽肤水</a>
+						<a>洁面</a>
+						<a>眼霜</a>
+						<a>身体乳</a>
+						<a class="fenlei-color4">卸妆</a>
+						<a>身体护理</a>
+						<a>男士护理</a>
+						<a>精油芳疗</a>
+						<a>丰胸</a>
+						<a>面部喷雾</a>
+						<a>T区护理</a>
+						<a>去角质</a>
+						<a class="fenlei-color4">补水</a>
+						<a>祛痘</a>
+						<a>敏感修护</a>
+						<a>线上专柜</a>
+					</div>
+					<div class="fenlei-title-rq">彩   妆  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color4">时尚彩妆</a>
+						<a>香水</a>
+						<a class="fenlei-color4">BB霜</a>
+						<a>美容工具</a>
+						<a class="fenlei-color4">口红</a>
+						<a>隔离</a>
+						<a>粉底</a>
+						<a>粉饼</a>
+						<a class="fenlei-color4">气垫bb</a>
+						<a>指甲油</a>
+						<a>美甲工具</a>
+						<a>眉笔</a>
+						<a class="fenlei-color4">睫毛膏</a>
+						<a>眼线</a>
+						<a>唇彩</a>
+						<a>眼影</a>
+						<a>蜜粉</a>
+						<a>彩妆套装</a>
+					</div>
+					<div class="fenlei-title-rq">男士护肤  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a>洁面</a>
+						<a>爽肤水</a>
+						<a>乳液/面霜</a>
+						<a>面部精华</a>
+						<a>眼部护理</a>
+						<a>防晒</a>
+						<a>唇部护理</a>
+						<a>T区护理</a>
+						<a>控油</a>			
+					</div>
+					<div class="fenlei-title-rq">肤质推选  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a>混合偏油型</a>
+						<a class="fenlei-color4">中性偏干型</a>
+						<a>敏感性</a>
+						<a class="fenlei-color4">干性</a>
+						<a class="fenlei-color4">油性</a>
+						<a class="fenlei-color4">混合型</a>
+						<a>中性</a>
+					</div>
+					<div class="fenlei-title-rq">美发护发  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color4">洗发水</a>
+						<a class="fenlei-color4">进口洗发水</a>
+						<a>护发素</a>
+						<a>发膜</a>
+						<a class="fenlei-color4">洗护套装</a>
+						<a>护发精油</a>
+						<a>头发造型</a>
+						<a>弹力素</a>
+						<a>染发霜</a>
+						<a class="fenlei-color4">整顶假发</a>
+						<a>假发配件</a>
+						<a>男性假发</a>
+					</div>
+					<div class="fenlei-title-rq">口腔护理  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color4">牙膏</a>
+						<a>进口牙膏</a>
+						<a>牙刷</a>
+						<a class="fenlei-color4">进口牙刷</a>
+						<a class="fenlei-color4">漱口水</a>
+						<a>牙线</a>
+						<a>牙粉</a>
+						<a>口气清新剂</a>
+						<a>牙贴</a>
+						<a>口腔美白</a>
+						<a>假牙清洁</a>					
+					</div>
+					<div class="fenlei-title-rq">身体女性  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color4">沐浴露</a>
+						<a>香皂</a>
+						<a>泡澡浴盐</a>
+						<a>护足</a>
+						<a class="fenlei-color4">洗手液</a>
+						<a>手动剃须刀</a>
+						<a class="fenlei-color4">卫生巾</a>
+						<a>成人护垫</a>
+						<a>私处洗液</a>
+						<a>卫生棉条</a>					
+					</div>
+				</div><div class="tiepian-rq">
+				<a><img src="https://img.alicdn.com/tps/TB1Ns2VLVXXXXbXaXXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB1sZBCMXXXXXbEXpXXXXXXXXXX-1000-500.png_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB1r1kdLVXXXXarXpXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB1RcY6LVXXXXaJXFXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB16nsdLVXXXXX2XpXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB1EubOLVXXXXa6apXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i4/TB1qr7HJpXXXXadXpXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB1SbMiLVXXXXbWXXXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB1oer2LVXXXXavXVXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB1EzggLVXXXXc3XXXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB10av_LVXXXXXKXFXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB13YL5LVXXXXaGXVXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB1mIZhLVXXXXcNXXXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB1WfkhLVXXXXcpXXXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB1ELY5LVXXXXXVXVXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB13RsaLVXXXXcbXpXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB10srVLVXXXXbSaXXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB1IXDSLVXXXXXPapXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a class="tiepian-rq-last"></a>
+				</div>			
+			</div></li>
+			<li class="fenleirongqi"> <a class="fenleibtn fenlei-color5"><i class="iconfont icon-zuanshi fenlei-color5"></i>    腕表 /眼镜 /珠宝饰品</a>
+			<div class="fenlei-mulu fenlei-mulu-5" >
+				<div class="fenlei-text-rq">
+					<div class="fenlei-title-rq">黄金首饰  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color5">耳钉</a>
+						<a>黄金项链</a>
+						<a>投资黄金</a>
+						<a class="fenlei-color5">婚嫁套饰</a>
+						<a>黄金对戒</a>
+						<a>转运珠</a>
+						<a>足金饰品</a>
+						<a>K金饰品</a>
+						<a>商场同款</a>
+					</div>
+					<div class="fenlei-title-rq">钻石彩宝  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color5">结婚钻戒</a>
+						<a>钻石吊坠</a>
+						<a>钻石耳饰</a>
+						<a>钻石手链</a>
+						<a>裸钻定制</a>
+						<a class="fenlei-color5">红蓝宝石</a>
+						<a>绿宝石</a>
+						<a>坦桑石</a>
+						<a>其他天然宝石</a>
+					</div>
+					<div class="fenlei-title-rq">珍珠玉翠 </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color5">珍珠项链送妈妈</a>
+						<a>海水珍珠</a>
+						<a>和田玉</a>
+						<a>翡翠摆件</a>
+						<a class="fenlei-color5">翡翠手镯</a>
+						<a>翡翠项链</a>
+						<a>琥珀瘦脸</a>
+						<a class="fenlei-color5">天然琥珀</a>
+						<a>原矿琥珀</a>			
+					</div>
+					<div class="fenlei-title-rq">潮流饰品  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color5">明星同款</a>
+						<a>传统银饰</a>
+						<a>木手串</a>
+						<a>银手镯</a>
+						<a>石榴石手链</a>
+						<a>开口戒指</a>
+						<a class="fenlei-color5">胸针</a>
+						<a>宝宝银饰</a>
+						<a class="fenlei-color5">手链</a>
+						<a>项链</a>
+						<a class="fenlei-color5">发饰</a>
+						<a>手镯</a>
+						<a>耳饰</a>
+						<a>戒指</a>
+						<a>项坠</a>
+						<a class="fenlei-color5">施华洛世奇</a>
+						<a class="fenlei-color5">shes</a>
+						<a>银时代</a>
+						<a>伊泰莲娜</a>
+						<a class="fenlei-color5">PH7</a>
+						<a>Monchhichi</a>
+						<a class="fenlei-color5">ALEXANDRE</a>
+					</div>
+					<div class="fenlei-title-rq">腕   表  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color5">瑞士名表</a>
+						<a class="fenlei-color5">日韩港表</a>
+						<a class="fenlei-color5">欧美手表</a>
+						<a>经典国表</a>
+						<a class="fenlei-color5">国货精表</a>
+						<a class="fenlei-color5">男表</a>
+						<a class="fenlei-color5">女表</a>
+						<a>情侣表</a>
+						<a>儿童手表</a>
+						<a class="fenlei-color5">机械表</a>
+						<a>石英表</a>
+						<a>光能表</a>
+						<a>防水表</a>
+						<a>运动表</a>
+						<a>学生表</a>
+						<a>军表</a>
+						<a>陶瓷表</a>
+					</div>
+					<div class="fenlei-title-rq">眼   镜  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color5">太阳镜</a>
+						<a>墨镜</a>
+						<a>眼镜框</a>
+						<a class="fenlei-color5">近视眼镜</a>
+						<a>防辐射眼镜</a>
+						<a class="fenlei-color5">老花镜</a>
+						<a>司机镜</a>
+						<a class="fenlei-color5">偏光镜</a>
+						<a>驾驶镜</a>
+						<a>3D眼睛</a>
+						<a>雷朋</a>
+						<a>宝龙</a>
+						<a>宝岛眼镜</a>
+						<a>oakley</a>					
+					</div>
+					<div class="fenlei-title-rq">烟   具  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color5">电子烟</a>
+						<a>烟盒</a>
+						<a>烟斗</a>
+						<a>烟嘴</a>
+						<a>烟油</a>
+						<a>蒸汽烟</a>
+						<a>水烟</a>
+						<a>戒烟</a>
+						<a>女士烟</a>
+						<a>鼻烟</a>
+						<a>雪茄</a>					
+					</div>
+				</div><div class="tiepian-rq">
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1c0mwJXXXXXbcXFXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1o2ZgIpXXXXcNXVXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1Tc.dHpXXXXcZXXXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1nD_MHpXXXXa3XVXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB14Dn0HpXXXXaSaXXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1qgnQHpXXXXXvXFXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1dcqhHVXXXXabXpXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1dOLEIFXXXXXIXpXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1zL_xHVXXXXaVXpXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1H9oMIVXXXXarXFXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB12MLVHpXXXXb4XXXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1DOoJIVXXXXb7XFXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1o2UxIVXXXXcVaXXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i1/TB1T_PYLVXXXXcFXVXXXpJt1pXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i2/TB1OaMbLVXXXXbfXpXXXpJt1pXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/i3/TB1XJz8LVXXXXbnXFXXXpJt1pXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a class="tiepian-rq-last"></a>
+				</div>			
+			</div></li>
+			<li class="fenleirongqi"> <a class="fenleibtn fenlei-color6"><i class="iconfont icon-shouji fenlei-color6"></i>    手机 /数码 /电脑办公</a>
+			<div class="fenlei-mulu fenlei-mulu-6" >
+				<div class="fenlei-text-rq">
+					<div class="fenlei-title-rq">热门手机  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color6">小米</a>
+						<a>iPhone</a>
+						<a>魅族</a>
+						<a>荣耀</a>
+						<a>乐视</a>
+						<a>OPPO</a>
+						<a>vivo</a>
+						<a>三星</a>
+						<a>华为</a>
+					</div>
+					<div class="fenlei-title-rq">特色手机 </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a>AliOS</a>
+						<a>千元指纹</a>
+						<a>双卡双待</a>
+						<a>大屏</a>
+						<a>自拍</a>
+						<a>移动</a>
+						<a>联通</a>
+						<a>电信</a>
+						<a>合约机</a>
+					</div>
+					<div class="fenlei-title-rq">电脑整机  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color6">笔记本</a>
+						<a>平板电脑</a>
+						<a class="fenlei-color6">台式机</a>
+						<a>一体机</a>
+						<a>DIY</a>
+						<a>游戏本</a>
+						<a class="fenlei-color6">iPad</a>
+						<a class="fenlei-color6">Surface</a>			
+					</div>
+					<div class="fenlei-title-rq">智能数码  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a>智能设备</a>
+						<a class="fenlei-color6">智能手表</a>
+						<a>智能手环</a>
+						<a>VR眼镜</a>
+						<a class="fenlei-color6">智能摄像</a>
+						<a>智能健康</a>
+						<a>智能机器人</a>
+					</div>
+					<div class="fenlei-title-rq">游戏组装  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a>DIY电脑</a>
+						<a class="fenlei-color6">竞技DIY</a>
+						<a>显示器</a>
+						<a>游戏本</a>
+						<a class="fenlei-color6">机械键盘</a>
+						<a class="fenlei-color6">XBOX</a>
+						<a>游戏手柄</a>
+					</div>
+					<div class="fenlei-title-rq">硬件存储  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color6">显示器</a>
+						<a>机械键盘</a>
+						<a>固态硬盘</a>
+						<a class="fenlei-color6">CPU</a>
+						<a>显卡</a>
+						<a>主板</a>
+						<a class="fenlei-color6">高速U盘</a>
+						<a>路由器</a>					
+					</div>
+					<div class="fenlei-title-rq">摄影摄像  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a>相机</a>
+						<a class="fenlei-color6">单反</a>
+						<a>单电微单</a>
+						<a class="fenlei-color6">摄像机</a>
+						<a class="fenlei-color6">自拍神器</a>
+						<a>拍立得</a>
+						<a>镜头</a>
+						<a class="fenlei-color6">自拍杆</a>					
+					</div>
+					<div class="fenlei-title-rq">影音娱乐  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a class="fenlei-color6">耳机</a>
+						<a>天猫魔盒</a>
+						<a class="fenlei-color6">数码影音</a>
+						<a>家庭影院</a>
+						<a class="fenlei-color6">蓝牙耳机</a>
+						<a>网络播放器</a>					
+					</div>
+					<div class="fenlei-title-rq">办公文教  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a>文具</a>
+						<a>电子书</a>
+						<a>笔类/书写工具</a>
+						<a>智能投影</a>
+						<a>打印机</a>
+						<a>保险箱</a>				
+					</div>
+					<div class="fenlei-title-rq">数码配件  </div><i class="glyphicon glyphicon-menu-right"></i>
+					<div class="fenlei-line">
+						<a>手机配件</a>
+						<a class="fenlei-color6">苹果配件</a>
+						<a>笔记本配件</a>
+						<a class="fenlei-color6">平板配件</a>
+						<a>相机配件</a>
+						<a>手机车载配件</a>
+						<a class="fenlei-color6">kindle配件</a>
+						<a class="fenlei-color6">充电宝</a>
+						<a>自拍杆</a>
+						<a>数据线</a>
+						<a>电池</a>						
+					</div>					
+				</div><div class="tiepian-rq">
+				<a><img src="https://img.alicdn.com/tps/TB1CZYfMXXXXXbCXVXXXXXXXXXX-800-400.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/http://gtms04.alicdn.com/tps/i4/TB1PhrmHpXXXXX0XXXXXD.cNVXX-400-200.png_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1TPLrIFXXXXc9XVXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1vBzdJFXXXXaPXpXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1lsMhLFXXXXb1XFXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/i2/TB1xR5SIXXXXXazXpXXaTBZFVXX_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1fB29LVXXXXaGXVXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1hirDIVXXXXaZXpXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1MwaIIVXXXXa2XVXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1ECQcHpXXXXX0XpXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1yMKJLVXXXXaIaXXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1We4DLVXXXXatXpXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tfs/TB1xr53RXXXXXb9aXXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1gI_2IXXXXXaFXXXXwu0bFXXX.png_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB1kM8EIFXXXXbMXpXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/tps/TB131n8LVXXXXcVXpXXXXXXXXXX-1000-500.jpg_170x120q30.jpg"></a>
+				<a><img src="https://img.alicdn.com/bao/uploaded/TB13ejyGFXXXXXCaXXXSutbFXXX.jpg_170x120q30.jpg"></a>
+				<a class="tiepian-rq-last"></a>
+				</div>				
+			</div></li>
+			<li class="fenleirongqi"> <a class="fenleibtn fenlei-color7"><i class="iconfont icon-yingerche fenlei-color7"></i>    母婴玩具</a>
+			<div class="fenlei-mulu fenlei-mulu-7" >
+			
+			</div></li>
+			<li class="fenleirongqi"> <a class="fenleibtn fenlei-color8"><i class="iconfont icon-mian fenlei-color8"></i>    零食 /茶酒 /进口食品</a>
+			<div class="fenlei-mulu fenlei-mulu-8" >
+			
+			</div></li>
+			<li class="fenleirongqi"> <a class="fenleibtn fenlei-color9"><i class="iconfont icon-yingtao fenlei-color9"></i>    生鲜水果</a>
+			<div class="fenlei-mulu fenlei-mulu-9" >
+			
+			</div></li>
+			<li class="fenleirongqi"> <a class="fenleibtn fenlei-color10"><i class="iconfont icon-jiadian fenlei-color10"></i>    大家电 /生活电器</a>
+			<div class="fenlei-mulu fenlei-mulu-10" >
+			
+			</div></li>
+			<li class="fenleirongqi"> <a class="fenleibtn fenlei-color11"><i class="iconfont icon-jiajujiancai fenlei-color11"></i>    家具建材</a>
+			<div class="fenlei-mulu fenlei-mulu-11" >
+			
+			</div></li>
+			<li class="fenleirongqi"> <a class="fenleibtn fenlei-color12"><i class="iconfont icon-qiche fenlei-color12"></i>    汽车 /配件 /用品</a>
+			<div class="fenlei-mulu fenlei-mulu-12" >
+			
+			</div></li>
+			<li class="fenleirongqi"> <a class="fenleibtn fenlei-color13"><i class="iconfont icon-12 fenlei-color13"></i>    家纺 /家饰 /鲜花</a>
+			<div class="fenlei-mulu fenlei-mulu-13" >
+			
+			</div></li>
+			<li class="fenleirongqi"> <a class="fenleibtn fenlei-color14"><i class="iconfont icon-medicine fenlei-color14"></i>    医药保健</a>
+			<div class="fenlei-mulu fenlei-mulu-14" >
+			
+			</div></li>
+			<li class="fenleirongqi"> <a class="fenleibtn fenlei-color15"><i class="iconfont icon-chabei fenlei-color15"></i>    厨具 /收纳 /宠物</a>
+			<div class="fenlei-mulu fenlei-mulu-15" >
+			
+			</div></li>
+			<li class="fenleirongqi"> <a class="fenleibtn fenlei-color16"><i class="iconfont icon-tushuyinxiang fenlei-color16"></i>    图书音像</a>
+			<div class="fenlei-mulu fenlei-mulu-16" >
+			
+			</div></li>
+		</ul>
+	</div>
+
+	</div>
+	<!-- 轮播图 -->
+	<div class="lunbotu-fix">
+	<div id="lunbotu1" class="lunbotu myfade">
+		<a class="lunbo-tiepian1"><img src="https://img.alicdn.com/imgextra/i3/23/O1CN01PNAmSW1C2ZahBfVdV_!!23-2-luban.png_240x5000q100.jpg"></a>
+		<a class="lunbo-tiepian2"><img src="https://img.alicdn.com/imgextra/i1/38/O1CN01nsFOui1C9RX2iXw1p_!!38-2-lubanu.png_240x5000q100.jpg"></a>
+		<img  src="https://img.alicdn.com/tps/i4/TB1AQsOrmzqK1RjSZFLSuwn2XXa.jpg_q100.jpg" >
+	</div>
+	<div id="lunbotu2" class="lunbotu myfade">
+		<img  src="https://aecpm.alicdn.com/simba/img/TB1W4nPJFXXXXbSXpXXSutbFXXX.jpg" >
+	</div>
+	<div id="lunbotu3" class="lunbotu myfade">
+		<a class="lunbo-tiepian1"><img src="https://img.alicdn.com/imgextra/i1/87/O1CN01SyJ4PW1CVswGYvMNc_!!87-2-luban.png_240x5000q100.jpg"></a>
+		<a class="lunbo-tiepian2"><img src="https://img.alicdn.com/imgextra/i4/31/O1CN01kIBMet1C6ElAAURJM_!!31-2-luban.png_240x5000q100.jpg"></a>
+		<img  src="//img.alicdn.com/tps/i4/TB1utbfn4YaK1RjSZFnSuu80pXa.jpg" >
+	</div>
+	<div id="lunbotu4" class="lunbotu myfade">
+		<img  src="https://aecpm.alicdn.com/simba/img/TB1_JXrLVXXXXbZXVXXSutbFXXX.jpg" >
+	</div>
+	<div id="lunbotu5" class="lunbotu myfade">	
+		<a class="lunbo-tiepian1"><img src="https://img.alicdn.com/imgextra/i3/114/O1CN01BsflQO1CiFdFZ5wTa_!!114-2-lubanu.png_240x5000q100.jpg"></a>
+		<a class="lunbo-tiepian2"><img src="https://img.alicdn.com/imgextra/i2/71/O1CN01VyvVrZ1COYbDdfaZh_!!71-2-lubanu.png_240x5000q100.jpg">  </a>
+		<img  src="//img.alicdn.com/imgextra/i2/26/O1CN01apexYh1C3wmBIPL5m_!!26-0-luban.jpg_q100.jpg" >
+	</div>
+	<div id="lunbotu6" class="lunbotu myfade">
+		<img  src="//img.alicdn.com/imgextra/i3/167/O1CN01OhDjLZ1D6WcaRz9Ml_!!167-0-luban.jpg_q100.jpg" >
+	</div>
+	
+		<ul>
+			<li id="lunbotubtn1" class="lunbodot" onmouseenter="showSlides(1);clearTimeout(sz1);"></li>
+			<li id="lunbotubtn2" class="lunbodot" onmouseenter="showSlides(2);clearTimeout(sz1);"></li>
+			<li id="lunbotubtn3" class="lunbodot" onmouseenter="showSlides(3);clearTimeout(sz1);"></li>
+			<li id="lunbotubtn4" class="lunbodot" onmouseenter="showSlides(4);clearTimeout(sz1);"></li>
+			<li id="lunbotubtn5" class="lunbodot" onmouseenter="showSlides(5);clearTimeout(sz1);"></li>
+			<li id="lunbotubtn6" class="lunbodot" onmouseenter="showSlides(6);clearTimeout(sz1);"></li>
+		</ul>                                                                   
+	</div>
+</div>
+<script>
+var slidenum=0 ;//轮播图计数
+var slidbackground=new Array("rgb(255, 125, 16)","rgb(231, 231, 231)","rgb(255,0,90)","rgb(231,231,231)","rgb(224,31,31)","rgb(255,171,0)");//轮播图背景色
+
+
+showSlides();
+//轮播暂停
+$(".lunbotu").mouseenter(function(){
+	clearTimeout(sz1); 
+});
+$(".lunbotu").mouseleave(function(){
+	showSlides(); 
+	
+});
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("lunbotu");
+    var dots = document.getElementsByClassName("lunbodot");
+    for (i = 0; i <slides.length; i++) {
+       slides[i].style.display = "none"; 
+       dots[i].style.background="black";
+    }
+	if (typeof(n) == "undefined") { 
+		slidenum++;
+		if (slidenum > slides.length) {slidenum = 1}    
+		$(".lunbo").css("background-color",slidbackground[slidenum-1]);
+		slides[slidenum-1].style.display = "block"; 
+		dots[slidenum-1].style.background="white";
+		sz1=setTimeout(showSlides, 3000); // 切换时间为 3 秒
+	}
+	else {
+		slidenum=n;
+		$(".lunbo").css("background-color",slidbackground[slidenum-1]);
+		slides[n-1].style.display = "block"; 
+		dots[n-1].style.background="white";
+		
+		
+			
+	}
+}
+</script>
+
+<!-- 顶部搜索框 -->
+<div class="top-search">
+	<div class=" top-search-fix">
+		<span class="logo-en">TMALL</span><span class="logo-zh">天猫</span>
+		<form class="top-search-form">
+			<input  id="top-search-input"type="text"  class="top-search-input" placeholder=" 搜索 天猫 商品/品牌/店铺" ></input><button class="top-search-btn">搜索</button>
+		</form>	
+
+	</div>
+
+<script>
+<!-- 隐藏显示顶部搜索框 -->
+$(window).scroll(function (){
+    if($(window).scrollTop()>=($(".lunbo").offset().top+$(".lunbo").height())){
+		// $(".top-search").css("display","block");
+		//$(".top-search").animate({top:'0'});
+		$(".top-search").slideDown(200);
+	}
+	else{
+		//$(".top-search").css("display","none"); 
+		//$(".top-search").animate({top:'-50px'});
+		$(".top-search").slideUp(200);
+	}
+	
+});
+
+</script>
+</div>
+
+<!-- 主体背景 -->
+<div class="body-rq">
+<div class="body-rq-fix">
+<!-- 轮播下导航 -->
+<div class="pinpai-datu-rq" style="width:234px;height:371px;margin-right:10px;">
+	<div class="pinpai-datu-title"><span class="pinpai-cn">品牌闪购</span><span class="pinpai-en">BRAND SALE</span><a><i class="glyphicon glyphicon-play-circle"></i></a></div>
+	<div class="pinpai-datu-tu"><a><img src="https://img.alicdn.com/tfs/TB1Z_NRuhGYBuNjy0FnXXX5lpXa-468-644.jpg_320x5000q100.jpg"></a></div>
+</div><div class="pinpai-datu-rq" style="width:485px;height:371px;margin-right:10px;">
+	<div class="pinpai-datu-title"><span class="pinpai-cn">聚名品</span><span class="pinpai-en">LUXURY CHANNEL</span><a>更多  <i class="glyphicon glyphicon-play-circle"></i></a></div>
+	<div class="pinpai-datu-tu"><a><img src="https://img.alicdn.com/tfs/TB1ZkoLukCWBuNjy0FaXXXUlXXa-966-644.jpg_490x490q100.jpg"></a></div>
+</div><div class="pinpai-datu-rq" style="width:485px;height:371px;">
+	<div class="pinpai-datu-title"><span class="pinpai-cn">品牌活动</span><span class="pinpai-en">BRAND ACTIVITY</span><a>更多  <i class="glyphicon glyphicon-play-circle"></i></a></div>
+	<div class="pinpai-datu-tu"><a><img src="https://img.alicdn.com/tps/i4/TB1FEZjsNTpK1RjSZFGSuwHqFXa.jpg_490x490q100.jpg"></a></div>
+</div>
+<!-- 品牌贴片 -->
+<div class="pinpaitiepian-fix">
+	<div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/T1tzyoXnd3XXb1upjX.jpg_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">T</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1D0sLnHSYBuNjSspiXXXNzpXa?abtest=&pos=2&abbucket=&acm=09042.1003.1.1200415&scm=1007.13029.56634.100200300000000_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">belulu</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1lL6xPVXXXXcTXpXXSutbFXXX.jpg_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">Sefon/臣枫</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1B.inJVXXXXcfXVXXSutbFXXX.jpg_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">EVE‘NY/伊芙心悦</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1KFgvIVXXXXX_apXXSutbFXXX.jpg_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">SUSONGETH/首尚格释</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1VcxuJVXXXXXEXpXXSutbFXXX.jpg_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">喜马拉雅好声音</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1ilbUHpXXXXb8XXXXSutbFXXX.jpg_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">Schneider Electric/施耐德</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1R08RJFXXXXbFXFXXSutbFXXX.jpg_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">Crystaluxe</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1iDgRJpXXXXXbXVXXSutbFXXX.jpg_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">aspire（烟具）</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1TJNTPXXXXXcqXVXXSutbFXXX.jpg_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">ENFINITAS/蓝臻</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/T1X8OBXwhcXXal8NYH_!!0.JPG_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">奔富酒园</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1o7kCcZyYBuNkSnfoXXcWgVXa?abtest=&pos=12&abbucket=&acm=09042.1003.1.1200415&scm=1007.13029.56634.100200300000000_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">优惠券 ￥50</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1FgqknYGYBuNjy0FoXXciBFXa?abtest=&pos=13&abbucket=&acm=09042.1003.1.1200415&scm=1007.13029.56634.100200300000000_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">布朗天使</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1L.evIXXXXXcXXFXXSutbFXXX.jpg_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">Skin Menu/肌肤之食</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB14cKyo26H8KJjy0FjXXaXepXa?abtest=&pos=15&abbucket=&acm=09042.1003.1.1200415&scm=1007.13029.56634.100200300000000_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">Aide Baou/爱得堡</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1I1IYIVXXXXalXXXXSutbFXXX.jpg_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">普哆衣</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1a3bVRXXXXXbfXFXXXXXXXXXX?abtest=&pos=17&abbucket=&acm=09042.1003.1.1200415&scm=1007.13029.56634.100200300000000_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">GateMan</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1oZGMPXXXXXayXFXXSutbFXXX.jpg_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">依纳</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1qWQyIVXXXXXlapXXSutbFXXX.jpg_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">Pinterchains/品特链条</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1mk.Ob4WYBuNjy1zkXXXGGpXa?abtest=&pos=20&abbucket=&acm=09042.1003.1.1200415&scm=1007.13029.56634.100200300000000_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">米皇</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1D2SNJVXXXXXmXVXXSutbFXXX.jpg_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">Plasmon</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB18pr2k1uSBuNjSsplXXbe8pXa?abtest=&pos=22&abbucket=&acm=09042.1003.1.1200415&scm=1007.13029.56634.100200300000000_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">Difiney/蒂芬妮</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1aIWcq4WYBuNjy1zkXXXGGpXa?abtest=&pos=23&abbucket=&acm=09042.1003.1.1200415&scm=1007.13029.56634.100200300000000_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">ROYAL CANIN/皇家</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1ma.ZIVXXXXaEXXXXSutbFXXX.jpg_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">Love＆Rattan/藤佳人</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1sMyEGFXXXXcXXVXXkbrmNFXX_!!0.jpg_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">澜</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB17zqElNGYBuNjy0FnXXX5lpXa?abtest=&pos=26&abbucket=&acm=09042.1003.1.1200415&scm=1007.13029.56634.100200300000000_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">Racekish</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1kJg5ifiSBuNkSnhJXXbDcpXa?abtest=&pos=27&abbucket=&acm=09042.1003.1.1200415&scm=1007.13029.56634.100200300000000_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">卫洗丽</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB1gKOgv98YBeNkSnb4wu1evFXa.png_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">J Brand</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq">
+		<img  class="pinpailogo-rq" src="//img.alicdn.com/i2/2/TB17gUAJFXXXXccXpXXSutbFXXX.jpg_100x150q100.jpg">
+		<a class="pinpai-lianjie">	
+			<span class="pinpai-name">杭依阁</span>
+			<span class="pinpai-jinru">点击进入</span>
+		</a>
+	</div><div class="pinpaitiepian-rq shuaxin-rq">
+				
+					<span class="glyphicon glyphicon-refresh shuaxin-icon  "></span>
+					<span class="shuaxin-huanyipi">换一批</span>
+		
+	</div>
+
+
+
+</div>
+<!-- 天猫超市 -->
+<div class="fenqu-rq">
+	<div class="fenqu-title">
+		<img src="https://img.alicdn.com/tfs/TB1Q67hXPihSKJjy0FeXXbJtpXa-428-50.png">
+		<ul>
+			<li><a>进口食品</a></li>
+			<li><a>食品饮料</a></li>
+			<li><a>粮油副食</a></li>
+			<li><a>美容洗护</a></li>
+			<li><a>家具家电</a></li>
+			<li><a>家庭清洁</a></li>
+			<li><a>母婴用品</a></li>
+			<li><a>生鲜水果</a></li>
+		</ul>
+	</div>
+	<a><img class="fenqu-1"src="https://gw.alicdn.com/tfs/TB1faadbSzqK1RjSZFjXXblCFXa-468-1236.jpg"></a>
+	<div class="fenqu-biaoqian1"><span>天猫超市</span></div><div class="fenqu-biaoqian2"><span>狂欢不断电精彩继续</span></div>
+	<img class="fenqu-1-1" src="https://img.alicdn.com/tfs/TB1IQBtXaagSKJjy0FbXXa.mVXa-68-68.png">
+	<div class="fenqu-2">
+		<div class="xiaolunbo-btn" onmouseenter="showslides1(1);clearTimeout(sz2)" >今日疯抢</div><div class="xiaolunbo-btn" onmouseenter="showslides1(2);clearTimeout(sz2)" >量贩装</div>
+		<div class="xiaolunbo-rq">
+			<a><img src="https://img.alicdn.com/tfs/TB1cHjNgOrpK1RjSZFhXXXSdXXa-400-400.jpg"></a>
+			<div class="xiaolunbo-rq-biaoqian">
+				<span class="xiaolunbo-rq-biaoqian1"><i class="iconfont icon-rili"></i> 限时限量疯抢</span>
+				<span class="xiaolunbo-rq-biaoqian2">1元超值疯抢中</span>
+			</div>
+		</div>
+		<div class="xiaolunbo-rq">
+			<a><img src="https://img.alicdn.com/tfs/TB1hU03vQvoK1RjSZPfXXXPKFXa-400-400.jpg"></a>
+			<div class="xiaolunbo-rq-biaoqian">
+				<span class="xiaolunbo-rq-biaoqian1"><i class="iconfont icon-rili"></i> 三只松鼠坚果</span>
+				<span class="xiaolunbo-rq-biaoqian2">下单立减10</span>
+			</div>
+		</div>
+	</div>
+<script>
+var slidenum1=0;
+showslides1();
+
+$(".xiaolunbo-rq").mouseenter(function(){
+	clearTimeout(sz2);
+});
+$(".fenqu-2").mouseleave(function(){
+	showslides1();
+});
+function showslides1(n1){
+	var slides1=document.getElementsByClassName("xiaolunbo-rq");
+	var slides1btn=document.getElementsByClassName("xiaolunbo-btn");
+	var i;
+	for (i=0;i<slides1.length;i++) {
+		slides1[i].style.display="none";
+		slides1btn[i].style.background="#f2f2f2";
+	}
+	if (typeof(n1)=="undefined"){
+		slidenum1++;
+		if (slidenum1>slides1.length){slidenum1=1;}
+		slides1[slidenum1-1].style.display="block";
+		slides1btn[slidenum1-1].style.background="#00b262";
+		sz2=setTimeout(showslides1,2000);
+	}
+	else{
+		slidenum1=n1;
+		slides1[n1-1].style.display="block";
+		slides1btn[n1-1].style.background="#00b262";
+	}
+	
+}
+
+</script>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i4/725677994/TB2jWs3c9rqK1RjSZK9XXXyypXa_!!725677994-0-sm.jpg"></a>
+		<div class="fenqu-3-2">比利时进口零食LOTUS和情焦糖饼干</div>
+		<div class="fenqu-3-3">￥9.9</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i1/725677994/O1CN01EGGiOa28vIcoXsMwO_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">奥妙洗衣液 除菌除螨洗衣液400G*10袋</div>
+		<div class="fenqu-3-3">￥79</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i2/725677994/O1CN01OfQ1Jx28vIdPQ036n_!!725677994-0-sm.jpg"></a>
+		<div class="fenqu-3-2">日本资生堂洗面奶洗颜专科珊珂绵润泡沫洁面乳150g男女深层清洁</div>
+		<div class="fenqu-3-3">￥62</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i4/725677994/TB2ZsCZdFYqK1RjSZLeXXbXppXa_!!725677994-0-sm.jpg"></a>
+		<div class="fenqu-3-2">花王日本进口纸尿裤S82片 超薄透气男女通用婴儿尿不湿非拉拉裤</div>
+		<div class="fenqu-3-3">￥99</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i1/725677994/O1CN01v3v7Qd28vIcqiuyaW_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">韩国进口 海苔海牌烤海苔原味16g*2包海产品零食</div>
+		<div class="fenqu-3-3">￥21</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i1/725677994/TB2O3s9cVzqK1RjSZFvXXcB7VXa_!!725677994-0-sm.jpg"></a>
+		<div class="fenqu-3-2">【包邮】甘源蟹黄味蚕豆285g*2包坚果炒货休闲零食小吃独立小包</div>
+		<div class="fenqu-3-3">￥20</div>
+	</div>
+</div>
+<!-- 天猫国际 -->
+<div class="fenqu-rq">
+	<div class="fenqu-title">
+		<img src="https://img.alicdn.com/tfs/TB1R.slXGagSKJjy0FgXXcRqFXa-428-50.png">
+		<ul>
+			<li><a>口红</a></li>
+			<li><a>YSL</a></li>
+			<li><a>面膜</a></li>
+			<li><a>防晒</a></li>
+			<li><a>迪奥</a></li>
+		</ul>
+	</div>
+	<a><img  style="height: 306px;"class="fenqu-1"src="https://img.alicdn.com/tps/i4/TB1QfwEsCzqK1RjSZFLwu3n2XXa.png"></a>
+	<div style="top:200px;"class="fenqu-biaoqian1"><span>进口精选</span></div><div style="top:200px"class="fenqu-biaoqian2"><span>大牌好货轻松购入</span></div>
+	<img  style="top:300px"class="fenqu-1-1" src="https://img.alicdn.com/tfs/TB1IQBtXaagSKJjy0FbXXa.mVXa-68-68.png">
+	
+	<div class="fenqu-3">
+		<div class="fenqu-3-2" style="font-size: 18px;position: relative;top: 20px;left: -20px;">官方直营优选</div>
+		<div class="fenqu-3-3" style="color: #7A45E5;font-size: 14px;position: relative;left: -30px;">极致购物感受</div>
+		<a><img class="fenqu-3-1"src="https://img.alicdn.com/tps/i4/TB1dSs7sxjaK1RjSZKzSutVwXXa.jpg"></a>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i1/4245870002/O1CN01xizBfe1BsxGwOr4BN_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">【四肢方形贴】产后腹直肌分离英国Tenscare医而维产后腹直肌修复</div>
+		<div class="fenqu-3-3">￥60</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i1/2849136065/TB1YGqlnhTpK1RjSZFKXXa2wXXa_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">波兰ZIAJA山羊奶面膜补水保湿涂抹式嫩白美肤修复齐叶雅正品女</div>
+		<div class="fenqu-3-3">￥99</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i4/1954193971/O1CN01CQaQuu1fClFiNjns9_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">保税 日本DHC辅酶Q10紧致辅助焕肤美容面霜20g高保湿滋润补水修复</div>
+		<div class="fenqu-3-3">￥79</div>
+	</div>
+	<a><img  style="height: 306px;"class="fenqu-1"src="https://img.alicdn.com/tps/i4/TB1KbQHsxTpK1RjSZFGwu3HqFXa.png"></a>
+	<div style="top:510px;"class="fenqu-biaoqian1"><span>直营品质</span></div><div style="top:510px;"class="fenqu-biaoqian2"><span>放心体验畅享全球</span></div>
+	<img  style="top:605px"class="fenqu-1-1" src="https://img.alicdn.com/tfs/TB1IQBtXaagSKJjy0FbXXa.mVXa-68-68.png">
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i3/2549841410/TB2E0marL9TBuNjy0FcXXbeiFXa_!!2549841410-0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">【直营】Aveeno baby 艾惟诺宝宝婴儿舒缓柔嫩洗澡沐浴乳354ml</div>
+		<div class="fenqu-3-3">￥89</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i1/2863127650/O1CN01Ys5NFz26NkO8KtplI_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">进口red seal/红印小苏打牙膏美白牙齿去牙渍正品不含氟清洁咸味</div>
+		<div class="fenqu-3-3">￥35</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i4/TB1ZkKpLXXXXXbZaXXXXXXXXXXX_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">浪凡LANVIN Jeanne 女士淡香水Q版小样 EDP 甜美清新持久迷人香气</div>
+		<div class="fenqu-3-3">￥83</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i1/2861689487/O1CN01KtQZoN2Jx5xY1PQvK_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">韩国the saem得鲜KOK双头气垫染色口红RD01豆沙色唇膏保湿唇彩/</div>
+		<div class="fenqu-3-3">￥49</div>
+	</div>
+</div>
+<!-- 美丽人生 -->
+<div class="fenqu-rq">
+	<div class="fenqu-title">
+		<div class="fenqu-title-1"><i class="glyphicon glyphicon-pause"></i> 美丽人生    <span>FASHION & BEAUTY</span></div>
+		<ul>
+			<li><a>连衣裙</a></li>
+			<li><a>T恤男</a></li>
+			<li><a>美容护肤</a></li>
+			<li><a>休闲男鞋</a></li>
+			<li><a>黄金项链</a></li>
+			<li><a>单鞋</a></li>
+			<li><a>女包</a></li>
+			<li><a>文胸</a></li>
+			<li><a>大牌腕表</a></li>
+		</ul>
+	</div>
+	<a><img class="fenqu-1"src="https://img.alicdn.com/tps/i4/TB1RNFMvVzqK1RjSZSgSuwpAVXa.jpg"></a>
+	<div class="fenqu-biaoqian1"><span>运动户外</span></div><div class="fenqu-biaoqian2"><span>新年焕新装抢百万卷</span></div>
+	<img class="fenqu-1-1" src="https://img.alicdn.com/tfs/TB1IQBtXaagSKJjy0FbXXa.mVXa-68-68.png">
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i1/4207666745/O1CN01e3rh531zhFwuvJem7_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">【特价】美特斯邦威卫衣男套头秋冬款加厚宽松灰色外套韩版包邮</div>
+		<div class="fenqu-3-3">￥69.9</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i3/1640495040/O1CN01gFYOSN1n6MelWEoKE_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">回力马丁靴男高帮加绒雪地靴男冬季保暖加绒男士棉鞋男靴子韩版潮</div>
+		<div class="fenqu-3-3">￥73</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i2/TB1PUxINpXXXXcDXpXXXXXXXXXX_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">李宁正品16冬季新款 男子半掌气垫经典运动休闲鞋跑步鞋ARCL051</div>
+		<div class="fenqu-3-3">￥99</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i2/1705989642/O1CN012L65KZCUDfNqFDS_!!2-item_pic.png"></a>
+		<div class="fenqu-3-2">SHOEBOX/鞋柜系带中跟女靴欧美马丁靴圆头方跟短靴瘦瘦靴时尚简约</div>
+		<div class="fenqu-3-3">￥45</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i2/1049909820/O1CN01emupo12MPbqMLR41I_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">啄木鸟钱包女长款真皮优质牛皮女士软皮钱夹手包薄款卡包2018新款</div>
+		<div class="fenqu-3-3">￥79</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i1/2082098619/O1CN01Az4YfV2DXYAxdZiPB_!!2-item_pic.png"></a>
+		<div class="fenqu-3-2">曼秀雷敦肌研深层洁净清痘洁面乳100g洗面奶清洁保湿补水</div>
+		<div class="fenqu-3-3">￥25</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i3/2232981357/O1CN011LtXvl7yj5DWyCI_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">18冬新款羊羔绒收口卫裤男 加绒加厚高弹保暖宽松直筒休闲运动裤</div>
+		<div class="fenqu-3-3">￥99</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i2/874299599/O1CN012KmOITkqmm4GROw_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">吉普盾男装冬季棉衣男外套中长款加绒加厚中年爸爸棉袄大码棉服</div>
+		<div class="fenqu-3-3">￥168</div>
+	</div>
+</div>
+<!-- 潮电酷玩 -->
+<div class="fenqu-rq">
+	<div class="fenqu-title">
+	<div class="fenqu-title-1"><i class="glyphicon glyphicon-pause"></i> 潮电酷玩    <span>ELECTRONICS</span></div>
+		<ul>
+			<li><a>手机</a></li>
+			<li><a>iPhone</a></li>
+			<li><a>相机</a></li>
+			<li><a>数码配件</a></li>
+			<li><a>影音电玩</a></li>
+			<li><a>生活电器</a></li>
+			<li><a>个人护理</a></li>
+			<li><a>电脑硬件</a></li>
+			<li><a>笔记本</a></li>
+		</ul>
+	</div>
+	<a><img class="fenqu-1"src="https://img.alicdn.com/imgextra/i2/2838892713/O1CN01L77Nqt1Vub0DiBGxz_!!2838892713.jpg"></a>
+	<div class="fenqu-biaoqian1"><span>华为新品</span></div><div class="fenqu-biaoqian2"><span>重磅上市立即抢购</span></div>
+	<img class="fenqu-1-1" src="https://img.alicdn.com/tfs/TB1IQBtXaagSKJjy0FbXXa.mVXa-68-68.png">
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i1/2936242568/O1CN01S52gLv1UqBZubQ310_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">F9 隐形一对开车入耳塞式男女通用蓝牙耳机无线超小迷你双耳运动跑步挂耳式可接听电话头戴式苹果微型手机</div>
+		<div class="fenqu-3-3">￥89</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i4/1695262688/O1CN01cp31f11Vj96HbV7Ee_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">Takstar/得胜 DM-2008 KTV专用话筒 家用K歌有线动圈麦克风</div>
+		<div class="fenqu-3-3">￥129</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i1/3253752910/O1CN01jnHlaU1XMp2C5eViG_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">先科干衣机家用烘干机衣服速干衣小型风干机电暖风机大容量烘衣机</div>
+		<div class="fenqu-3-3">￥109</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i2/2195362754/O1CN01Bn4j0O1WDNF5YMOE3_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">智能电话手表手机wifi安卓插卡防水成人男孩女孩儿童学生上网定位GPS高中生中学生多功能smart watch手环</div>
+		<div class="fenqu-3-3">￥298</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i4/441731092/TB1Wku.aBfM8KJjSZPiXXXdspXa_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">亚都超声波加湿器4L大容量上加水静音办公室卧室家用SC-S040</div>
+		<div class="fenqu-3-3">￥299</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i4/1749873883/O1CN011eYSOk0ilpAYLLO_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">酷冷至尊CM310 7档DPI调节七按键 usb家用吃鸡游戏鼠标 RGB灯效</div>
+		<div class="fenqu-3-3">￥199</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i1/3820315437/TB1bWU_dhSYBuNjSsphXXbGvVXa_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">cado 车载空气净化器MP-C20U 专用滤芯滤网 型号：FL-C20</div>
+		<div class="fenqu-3-3">￥109</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i3/879363054/O1CN01wKLOG01YQm3oIqHQx_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">惠普u盘64g高速usb3.0迷你车载防水个性创意礼品礼物男女学生商务卡通可爱情侣优盘原装正版电脑两用移动u盘</div>
+		<div class="fenqu-3-3">￥89.9</div>
+	</div>
+</div>
+<!-- 居家生活 -->
+<div class="fenqu-rq">
+	<div class="fenqu-title">
+		<div class="fenqu-title-1"><i class="glyphicon glyphicon-pause"></i> 居家生活    <span>GROCERY & HEALTH</span></div>
+		<ul>
+			<li><a>零食</a></li>
+			<li><a>牛奶</a></li>
+			<li><a>居家饰品</a></li>
+			<li><a>保温杯</a></li>
+			<li><a>保健品</a></li>
+			<li><a>常用药</a></li>
+			<li><a>热门图书</a></li>
+			<li><a>洗发水</a></li>
+			<li><a>卫生巾</a></li>
+			<li><a>家庭清洁</a></li>
+			<li><a>狗粮</a></li>
+		</ul>
+	</div>
+	<a><img class="fenqu-1"src="https://img.alicdn.com/tps/i4/TB1QsmZhUQIL1JjSZFhwu1DZFXa.png"></a>
+	<div class="fenqu-biaoqian1"><span>美家</span></div><div class="fenqu-biaoqian2"><span>家饰尚品清新居家</span></div>
+	<img class="fenqu-1-1" src="https://img.alicdn.com/tfs/TB1IQBtXaagSKJjy0FbXXa.mVXa-68-68.png">
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i2/2138400650/O1CN011GfjuhIDQnSI3ug_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">迪士尼儿童手套冬季保暖漫威毛绒男孩五指两用针织宝宝男童手套厚</div>
+		<div class="fenqu-3-3">￥28</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i3/TB1hHfUNXXXXXcZaXXXXXXXXXXX_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">日式创意不锈钢便携式餐具盒三件套装学生可爱筷子盒长柄勺子叉子</div>
+		<div class="fenqu-3-3">￥5.1</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i1/3235117191/O1CN01HEsIDN22zWaLhZE1a_!!2-item_pic.png"></a>
+		<div class="fenqu-3-2">西麦拉链款1500g*2袋原味燕麦片无添加蔗糖即食免煮早餐超市有售</div>
+		<div class="fenqu-3-3">￥43.8</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i3/2359841130/O1CN01oH3gNG1KDa28031M9_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">客服改价 联系客服改邮费</div>
+		<div class="fenqu-3-3">￥36</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i2/2510693222/O1CN01Yb9iSc1ZfiblMbDxZ_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">蒙牛奶粉成人400g*2全家中老年男女士高钙营养早餐老年人配方奶粉</div>
+		<div class="fenqu-3-3">￥56.9</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i3/2389957613/O1CN01266nixQxTi6fn1j_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">梁丰麦丽素25g*30包怀旧休闲零食组合礼物巧克力豆朱古力代可可脂</div>
+		<div class="fenqu-3-3">￥12.5</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i3/2404212771/O1CN01aqzYrw1WL9yVxce9O_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">盼盼梅尼耶干蛋糕320g散装整箱巧克力饼干早餐零食休闲糕点面包片</div>
+		<div class="fenqu-3-3">￥22.9</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i3/2404212771/O1CN01aqzYrw1WL9yVxce9O_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">南极人劳保鞋男秋冬季透气防滑全皮工作地轻便安全老耐磨防砸刺穿</div>
+		<div class="fenqu-3-3">￥89</div>
+	</div>
+</div>
+<!-- 打造爱巢 -->
+<div class="fenqu-rq">
+	<div class="fenqu-title">
+		<div class="fenqu-title-1"><i class="glyphicon glyphicon-pause"></i> 打造爱巢   <span>HOME</span></div>
+		<ul>
+			<li><a>家具</a></li>
+			<li><a>大家电</a></li>
+			<li><a>四件套</a></li>
+			<li><a>健康电器</a></li>
+			<li><a>厨房电器</a></li>
+			<li><a>吸顶灯</a></li>
+			<li><a>平板电视</a></li>
+			<li><a>装修设计</a></li>
+			<li><a>跑步机</a></li>
+		</ul>
+	</div>
+	<a><img class="fenqu-1"src="https://img.alicdn.com/tfs/TB1AH1.nMHqK1RjSZFgXXa7JXXa-468-1236.jpg"></a>
+	<div class="fenqu-biaoqian1"><span>寒冬好货</span></div><div class="fenqu-biaoqian2"><span>全球小家电直降送好礼</span></div>
+	<img class="fenqu-1-1" src="https://img.alicdn.com/tfs/TB1IQBtXaagSKJjy0FbXXa.mVXa-68-68.png">
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i2/3305375223/O1CN011oSB7XWSa3cF9hv_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">【预售】Bear/小熊 HMJ-A50B1全自动电动和面机家用搅拌机揉面粉</div>
+		<div class="fenqu-3-3">￥399</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i2/3389869539/O1CN01CEbgx52KKuYHa3i80_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">2018新款志高中央空调遥控器  小多联专用</div>
+		<div class="fenqu-3-3">￥105</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i3/2979955527/O1CN011qhPW88LsRV7g1U_!!2979955527-0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">平板车塑料面板手推车塑料面板塑料车板拉货车塑料车板</div>
+		<div class="fenqu-3-3">￥50</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i4/708680081/O1CN011CT8Y3nrkLplM8P_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">Haier/海尔/统帅 BC/BD-143LD冰柜单温冷藏冷冻转换减霜节能冷柜</div>
+		<div class="fenqu-3-3">￥1249</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i3/TB1M2lzNVXXXXamaXXXXXXXXXXX_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">适之宝儿童健康枕头决明子护颈枕芯婴儿幼儿木棉荞麦壳纯棉枕套</div>
+		<div class="fenqu-3-3">￥88</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i4/2808625144/TB1XYNCXAfb_uJkHFqDXXXVIVXa_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">奥克斯绞肉机家用电动小型绞馅机切菜打肉机蒜泥蒜蓉碎菜碎肉机</div>
+		<div class="fenqu-3-3">￥119</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i1/TB19T.7RVXXXXX7aXXXXXXXXXXX_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">金正 JZFB-202D电饭煲1人-2人迷你小型学生宿舍多功能饭煲不粘锅</div>
+		<div class="fenqu-3-3">￥89</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i4/1901671803/O1CN011PBoZmbuJjyiibw_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">鸳鸯电火锅家用宿舍多功能电热锅电锅不粘一体锅电煮锅2-4-6-8人</div>
+		<div class="fenqu-3-3">￥499</div>
+	</div>
+</div>
+<!-- 户外出行 -->
+<div class="fenqu-rq">
+	<div class="fenqu-title">
+		<div class="fenqu-title-1"><i class="glyphicon glyphicon-pause"></i> 户外出行    <span>OUTDOORS & AUTOMOTIVE</span></div>
+		<ul>
+			<li><a>车秒货</a></li>
+			<li><a>皮肤衣</a></li>
+			<li><a>运动鞋</a></li>
+			<li><a>4保养</a></li>
+			<li><a>行车记录仪</a></li>
+			<li><a>轮胎</a></li>
+		</ul>
+	</div>
+	<a><img class="fenqu-1"src="https://img.alicdn.com/tps/i4/TB1ZoVLv5rpK1RjSZFhwu0SdXXa.png"></a>
+	<div class="fenqu-biaoqian1"><span>运动户外</span></div><div class="fenqu-biaoqian2"><span>现年换新装大牌钜惠</span></div>
+	<img class="fenqu-1-1" src="https://img.alicdn.com/tfs/TB1IQBtXaagSKJjy0FbXXa.mVXa-68-68.png">
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i2/2068534786/O1CN011lE22FN5rVE8T2q_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">男士吉普盾冲锋衣男棉服棉衣男冬加绒加厚户外运动休闲男外套大码</div>
+		<div class="fenqu-3-3">￥118</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i4/1789551426/O1CN011MP9GEVR8nL5xuW_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">李宁运动背包正品单肩背包男女通用学生书包韩版电脑包休闲一日包</div>
+		<div class="fenqu-3-3">￥49</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i4/3336095760/O1CN011sQ7noyk5TdBZKR_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">Dickies男鞋冬季休闲鞋男士低帮厚底工装鞋真皮耐磨户外鞋子潮流</div>
+		<div class="fenqu-3-3">￥429</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i2/474719868/TB1wehGbwjN8KJjSZFkXXaboXXa_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">博冠电子目镜200W像素CCD天文望远镜配件摄影头高清观星全画幅</div>
+		<div class="fenqu-3-3">￥278</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i1/2175152545/O1CN01e9UoBD1UfeT3qJs0Q_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">探路者外套男女 18秋冬户外加厚保暖连帽徒步外套KAEG91137/92138</div>
+		<div class="fenqu-3-3">￥299</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i1/1105278280/O1CN01gvXdgg2B2HuTQD6tx_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">正品阿迪达斯双肩包户外运动双肩背包新款adidas学生书包男AH4170</div>
+		<div class="fenqu-3-3">￥17</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i2/605482826/O1CN01vdAUB21WkLl9gkfXA_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">RAB 英国品牌2018年新款男式户外保暖抓绒衫半拉链轻质速干QFE77</div>
+		<div class="fenqu-3-3">￥399</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://gw.alicdn.com/bao/uploaded/i2/775532751/O1CN011WC02weGmkK07zD_!!0-item_pic.jpg"></a>
+		<div class="fenqu-3-2">思凯乐SCALER 男款户外套头抓绒衣 上品折扣F7152516</div>
+		<div class="fenqu-3-3">￥89</div>
+	</div>
+</div>
+<!-- 猜你喜欢 -->
+<div class="fenqu-rq">
+	<div class="cainixihuan">——<i class="glyphicon glyphicon-heart-empty"></i>猜你喜欢——</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://img.alicdn.com/bao/uploaded/i4/2616970884/O1CN015AU9jp1IOubb6XFUJ_!!2616970884.jpg_400x400q60.jpg"></a>
+		<div class="fenqu-3-2">【限时下拉详情页抢券立减200元】Apple/苹果 iPhone X 64G 全网通4G 智能手机 苹果X 苹果10 iPhone10</div>
+		<div class="fenqu-3-3">￥6488.0</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://img.alicdn.com/bao/uploaded/i2/1714128138/O1CN01KqQYZK29zFfTV8HpC_!!1714128138.jpg_400x400q60.jpg"></a>
+		<div class="fenqu-3-2">Xiaomi/小米 小米电视4A 65英寸4k超清智能网络电视60 55</div>
+		<div class="fenqu-3-3">￥3699.0</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://img.alicdn.com/bao/uploaded/bao/upload/TB1KoWykxnaK1RjSZFBXXcW7VXa.png_400x400q60.jpg"></a>
+		<div class="fenqu-3-2">男装 无缝羽绒连帽外套 409330 优衣库UNIQLO</div>
+		<div class="fenqu-3-3">￥799.0</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://img.alicdn.com/bao/uploaded/bao/upload/TB1cF_WwrPpK1RjSZFFXXa5PpXa.png_400x400q60.jpg"></a>
+		<div class="fenqu-3-2">科沃斯扫地机器人地宝DJ35吸尘器智能家用超薄全自动洗擦地机拖地</div>
+		<div class="fenqu-3-3">￥2199.0</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://img.alicdn.com/bao/uploaded/bao/upload/TB12r4UoDmWBKNjSZFBwu0xUFXa.png_400x400q60.jpg"></a>
+		<div class="fenqu-3-2">亿健精灵ELF跑步机家用款多功能减肥静音折叠小型室内健身房专用</div>
+		<div class="fenqu-3-3">￥1799.0</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://img.alicdn.com/bao/uploaded/bao/upload/TB1qFVFJ3aTBuNjSszfwu0gfpXa.png_400x400q60.jpg"></a>
+		<div class="fenqu-3-2">女装 高级轻型羽绒立领茄克 411339 优衣库UNIQLO</div>
+		<div class="fenqu-3-3">￥499.0</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://img.alicdn.com/bao/uploaded/bao/upload/TB1GAl8rOAnBKNjSZFvwu1TKXXa.png_400x400q60.jpg"></a>
+		<div class="fenqu-3-2">男装 仿羊羔绒运动长裤 409050 优衣库UNIQLO</div>
+		<div class="fenqu-3-3">￥129.0</div>
+	</div>
+	<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://img.alicdn.com/bao/uploaded/i2/725677994/O1CN01dVPHEN28vIcs3mk18_!!725677994.png_400x400q60.jpg"></a>
+		<div class="fenqu-3-2">维达超韧抽纸3层M码120抽24包整箱面中规格卫生纸巾 新旧包装交替</div>
+		<div class="fenqu-3-3">￥59.9</div>
+	</div>
+		<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://img.alicdn.com/bao/uploaded/i3/TB1ZBpnNpXXXXXzaXXXXXXXXXXX_!!0-item_pic.jpg_400x400q60.jpg"></a>
+		<div class="fenqu-3-2">Haier/海尔 EG10014B39GU1 10公斤kg蓝晶变频滚筒全自动洗衣机</div>
+		<div class="fenqu-3-3">￥2699.0</div>
+	</div>
+		<div class="fenqu-3">
+		<a><img class="fenqu-3-1"src="https://img.alicdn.com/bao/uploaded/bao/upload/TB1riawrsIrBKNjSZK9wu1goVXa.png_400x400q60.jpg"></a>
+		<div class="fenqu-3-2">女装 仿羊羔绒运动长裤 408694 优衣库UNIQLO</div>
+		<div class="fenqu-3-3">￥129.0</div>
+	</div>
+</div>
+<div class="end"></div>
+</div>
+</div>
+<!-- 底部 -->
+<div class="bottom-1">
+<a class="bottom-1-1"><i class="iconfont icon-you"></i><span class="bottom-1-1-1">品质保障</span><br><span class="bottom-1-1-2">品质护航 购物无忧</span></a>
+<a class="bottom-1-1"><i class="iconfont icon-qitiantuihuan"></i><span class="bottom-1-1-1">七天无理由退换货</span><br><span class="bottom-1-1-2">为您提供售后无忧保障</span></a>
+<a class="bottom-1-1"><i class="iconfont icon-te"></i><span class="bottom-1-1-1">特色服务体验</span><br><span class="bottom-1-1-2">为您呈现不一样的服务</span></a>
+<a class="bottom-1-1"><i class="iconfont icon-bang"></i><span class="bottom-1-1-1">帮助中心</span><br><span class="bottom-1-1-2">您的购物指南</span></a>
+</div>
+<div class="bottom-2">
+	<dl>
+		<dt>购物指南</dt><dd><a>免费注册</a></dd><dd><a>开通支付宝</a></dd><dd><a>支付宝充值</a></dd>
+	</dl>
+	<dl>
+		<dt>天猫保障</dt><dd><a>发票保障</a></dd><dd><a>售后规则</a></dd><dd><a>缺货赔付</a></dd>
+	</dl>
+	<dl>
+		<dt>支付方式</dt><dd><a>快捷支付</a></dd><dd><a>信用卡</a></dd><dd><a>余额宝</a></dd><dd><a>蚂蚁花呗</a></dd><dd><a>货到付款</a></dd>
+	</dl>
+	<dl>
+		<dt>商家服务</dt><dd><a>天猫规则</a></dd><dd><a>商家入驻</a></dd><dd><a>商家中心</a></dd><dd><a>天猫智库</a></dd><dd><a>物流服务</a></dd><dd><a>喵言喵语</a></dd><dd><a>运营服务</a></dd>
+	</dl>
+	<dl>
+		<dt>手机天猫</dt><dd><a><img src="https://img.alicdn.com/tps/i1/TB14VZKHXXXXXcAXXXX64VRZFXX-105-105.png"></a></dd>
+	</dl>
+	
+</div>
+</body>
+</html>
