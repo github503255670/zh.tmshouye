@@ -63,10 +63,10 @@ $(document).ready(function(){
 	$(window).scroll(function(){
 	for(i=1;i<9;i++){$(".zuocelan-1-1").eq(i).css("backgroundColor","#626262");}
 		if ($(window).scrollTop()<($(".lunbo").offset().top+$(".lunbo").height())){
-			$(".zuocelan").hide(200);
+			$(".zuocelan").hide(20);
 		}
 		else{
-			$(".zuocelan").show(200);
+			$(".zuocelan").show(20);
 			if ($(window).scrollTop()>=$(".fenqu-rq").eq(0).offset().top&&$(window).scrollTop()<$(".fenqu-rq").eq(1).offset().top){
 			$(".zuocelan-1-1").eq(1).css("backgroundColor",btncolor[0]);
 			}
